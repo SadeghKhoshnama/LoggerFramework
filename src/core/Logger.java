@@ -14,11 +14,11 @@ public class Logger {
         this.level=level;
     }
 
-    public void log(String message){
+    public void log(Level level,String message){
 
     }
 
-    public void log(String message,Object... args){
+    public void log(Level level,String message,Object... args){
 
     }
 }
