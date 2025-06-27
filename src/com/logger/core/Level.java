@@ -1,4 +1,4 @@
-package core;
+package com.logger.core;
 
 public enum Level {
     TRACE(0),
