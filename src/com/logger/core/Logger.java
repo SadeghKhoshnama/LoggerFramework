@@ -24,12 +24,40 @@ public class Logger {
     }
 
 
+    public void trace(String message){
+        logWriter.write(logFormatter.format(TRACE,message,packageName));
+    }
+
+    public void trace(String message,Object... args){
+        String formated=logFormatter.format(TRACE,String.format(message,args),packageName);
+        logWriter.write(formated);
+    }
+
+    public void debug(String message){
+        logWriter.write(logFormatter.format(DEBUG,message,packageName));
+    }
+
+    public void debug(String message,Object... args){
+        String formated=logFormatter.format(DEBUG,String.format(message,args),packageName);
+        logWriter.write(formated);
+    }
+
     public void info(String message){
         logWriter.write(logFormatter.format(INFO,message,packageName));
     }
 
     public void info(String message,Object ... args){
         String formated=logFormatter.format(INFO,String.format(message,args),packageName);
+        logWriter.write(formated);
+    }
+
+
+    public void warn(String message){
+        logWriter.write(logFormatter.format(WARN,message,packageName));
+    }
+
+    public void warn(String message,Object... args){
+        String formated=logFormatter.format(WARN,String.format(message,args),packageName);
         logWriter.write(formated);
     }
 
@@ -43,31 +71,13 @@ public class Logger {
     }
 
 
+    public void fatal(String message){
+        logWriter.write(logFormatter.format(FATAL,message,packageName));
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    public void log(Level level, String message){
-//        if (level.ordinal()>= this.level.ordinal()){
-//            logWriter.write(logFormatter.format(level,message,packageName));
-//        }
-//    }
-//
-//    public void log(Level level,String message,Object... args){
-//
-//    }
-
-
+    public void fatal(String message,Object... args){
+        String formated=logFormatter.format(FATAL,String.format(message,args),packageName);
+        logWriter.write(formated);
+    }
 
 }
