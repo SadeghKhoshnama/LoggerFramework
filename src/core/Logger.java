@@ -6,7 +6,7 @@ public class Logger {
 
     public Logger(String packageName) {
         this.packageName = packageName;
-        this.level=Level.getLevel("INFO");
+        this.level=Level.INFO;
     }
 
     public Logger(String packageName,Level level){
@@ -21,4 +21,7 @@ public class Logger {
     public void log(Level level,String message,Object... args){
 
     }
+
+
+
 }
