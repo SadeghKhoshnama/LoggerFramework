@@ -1,9 +1,9 @@
 package core;
 
-public class ConsoleLogWriter extends BaseLogWriter{
+public class ConsoleLogWriter implements LogWriter {
 
     @Override
-    public void write(String message) {
+    public void write(Level level,String message) {
         System.out.println(message);
     }
 }

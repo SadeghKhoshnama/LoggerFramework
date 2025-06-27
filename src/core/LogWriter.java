@@ -1,6 +1,6 @@
 package core;
 
 //if we only have functions like this i would rather make this as an interface.
-public abstract class BaseLogWriter {
-    public abstract void write(String message);
+public interface LogWriter {
+   void write(Level level,String message);
 }
