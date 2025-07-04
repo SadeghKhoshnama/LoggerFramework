@@ -2,9 +2,10 @@ package com.logger.core;
 
 public class Main {
 
-    private static final Logger logger
-            =LogManager.getLogger("com.logger.core",Level.INFO,new FileLogWriter("logger",false),new DefaultLogFormatter());
-
+//    private static final Logger logger
+//            =LogManager.getLogger("com.logger.core",Level.INFO
+//            ,new FileLogWriter("logger",false),new DefaultLogFormatter());
+    private static Logger logger=LogManager.getLogger("com.logger.core");
 
     public static void main(String[] args) {
         logger.info("Hello Im Sadegh");

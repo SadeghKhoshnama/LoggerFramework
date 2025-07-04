@@ -8,6 +8,7 @@ public class Logger {
     private LogWriter logWriter;
     private LogFormatter logFormatter;
 
+
     public Logger(String packageName) {
         this(packageName, INFO,new ConsoleLogWriter(),new DefaultLogFormatter());
     }
@@ -21,6 +22,7 @@ public class Logger {
         this.level = level;
         this.logWriter = logWriter;
         this.logFormatter=logFormatter;
+
     }
 
 
