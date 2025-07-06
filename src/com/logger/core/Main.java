@@ -2,10 +2,19 @@ package com.logger.core;
 
 public class Main {
 
-//    private static final Logger logger
-//            =LogManager.getLogger("com.logger.core",Level.INFO
-//            ,new FileLogWriter("logger",false),new DefaultLogFormatter());
-    private static Logger logger=LogManager.getLogger("com.logger.core");
+    private static Logger logger;
+    static {
+        LoggerConfig loggerConfig=new LoggerConfig()
+                .setLevel(Level.ERROR)
+                .setLogWriter(new ConsoleLogWriter())
+                .setFormatter(new DefaultLogFormatter());
+        LogManager.configure(loggerConfig);
+        logger=LogManager.getLogger("com.logger");
+    }
+
+
+
+
 
     public static void main(String[] args) {
         logger.info("Hello Im Sadegh");
@@ -14,5 +23,6 @@ public class Main {
         logger.error("Yeahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh %s","sadegh");
         logger.error("Connection for database is Okay error code Is:  %d",200);
         logger.fatal("Fatality happen %s %s %s %s","Iran","US","Taiwan","UK");
+        logger.debug("Debugging");
     }
 }

@@ -4,27 +4,30 @@ import java.util.List;
 
 public class LoggerConfig {
     private Level level;
-    private List<LogWriter> logWriters;
+    private LogWriter logWriter;
     private LogFormatter formatter;
 
-    public void setLevel(Level level) {
-        this.level = level;
+    public LoggerConfig setLevel(Level level){
+        this.level=level;
+        return this;
     }
 
-    public List<LogWriter> getLogWriters() {
-        return logWriters;
+    public LoggerConfig setLogWriter(LogWriter logWriter){
+        this.logWriter=logWriter;
+        return this;
     }
 
-    public void setLogWriters(List<LogWriter> logWriters) {
-        this.logWriters = logWriters;
-    }
-
-    public void setFormatter(LogFormatter formatter) {
-        this.formatter = formatter;
+    public LoggerConfig setFormatter(LogFormatter formatter){
+        this.formatter=formatter;
+        return this;
     }
 
     public Level getLevel() {
         return level;
+    }
+
+    public LogWriter getLogWriter() {
+        return logWriter;
     }
 
     public LogFormatter getFormatter() {

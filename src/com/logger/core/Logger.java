@@ -27,59 +27,87 @@ public class Logger {
 
 
     public void trace(String message){
-        logWriter.write(logFormatter.format(TRACE,message,packageName));
+        if (TRACE.ordinal()>=level.ordinal()){
+            logWriter.write(logFormatter.format(TRACE,message,packageName));
+        }
+
     }
 
     public void trace(String message,Object... args){
-        String formated=logFormatter.format(TRACE,String.format(message,args),packageName);
-        logWriter.write(formated);
+        if (TRACE.ordinal()>=level.ordinal()){
+            String formated=logFormatter.format(TRACE,String.format(message,args),packageName);
+            logWriter.write(formated);
+        }
+
     }
 
     public void debug(String message){
-        logWriter.write(logFormatter.format(DEBUG,message,packageName));
+        if (DEBUG.ordinal()>=level.ordinal()){
+            logWriter.write(logFormatter.format(DEBUG,message,packageName));
+        }
     }
 
     public void debug(String message,Object... args){
-        String formated=logFormatter.format(DEBUG,String.format(message,args),packageName);
-        logWriter.write(formated);
+        if (DEBUG.ordinal()>=level.ordinal()){
+            String formated=logFormatter.format(DEBUG,String.format(message,args),packageName);
+            logWriter.write(formated);
+        }
+
     }
 
     public void info(String message){
-        logWriter.write(logFormatter.format(INFO,message,packageName));
+        if (INFO.ordinal()>=level.ordinal()){
+            logWriter.write(logFormatter.format(INFO,message,packageName));
+        }
     }
 
     public void info(String message,Object ... args){
-        String formated=logFormatter.format(INFO,String.format(message,args),packageName);
-        logWriter.write(formated);
+        if (INFO.ordinal()>=level.ordinal()){
+            String formated=logFormatter.format(INFO,String.format(message,args),packageName);
+            logWriter.write(formated);
+        }
     }
 
 
     public void warn(String message){
-        logWriter.write(logFormatter.format(WARN,message,packageName));
+        if (WARN.ordinal()>=level.ordinal()){
+            logWriter.write(logFormatter.format(WARN,message,packageName));
+        }
     }
 
     public void warn(String message,Object... args){
-        String formated=logFormatter.format(WARN,String.format(message,args),packageName);
-        logWriter.write(formated);
+        if (WARN.ordinal()>=level.ordinal()){
+            String formated=logFormatter.format(WARN,String.format(message,args),packageName);
+            logWriter.write(formated);
+        }
     }
 
     public void error(String message){
-        logWriter.write(logFormatter.format(ERROR,message,packageName));
+        if (ERROR.ordinal()>=level.ordinal()){
+            logWriter.write(logFormatter.format(ERROR,message,packageName));
+        }
     }
 
     public void error(String message,Object... args){
-        String formated=logFormatter.format(ERROR,String.format(message,args),packageName);
-        logWriter.write(formated);
+        if (ERROR.ordinal()>=level.ordinal()){
+            String formated=logFormatter.format(ERROR,String.format(message,args),packageName);
+            logWriter.write(formated);
+        }
+
     }
 
 
     public void fatal(String message){
-        logWriter.write(logFormatter.format(FATAL,message,packageName));
+        if (FATAL.ordinal()>=level.ordinal()){
+            logWriter.write(logFormatter.format(FATAL,message,packageName));
+        }
     }
 
     public void fatal(String message,Object... args){
-        String formated=logFormatter.format(FATAL,String.format(message,args),packageName);
-        logWriter.write(formated);
+        if (FATAL.ordinal()>=level.ordinal()){
+            String formated=logFormatter.format(FATAL,String.format(message,args),packageName);
+            logWriter.write(formated);
+        }
     }
 
 }
