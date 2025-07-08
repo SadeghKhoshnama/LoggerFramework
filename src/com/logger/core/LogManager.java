@@ -3,35 +3,43 @@ package com.logger.core;
 public class LogManager {
 
     private static LoggerConfig loggerConfig=null;
+    private static LogWriter logWriter;
 
     public static Logger getLogger(String packageName){
-        if (packageName==null || packageName.isBlank()){
-            //todo i dont know whether i throw an exception or just return null.
-        }
         if (loggerConfig==null){
-            return new Logger(packageName);
+            ensureLoggerInitialization();
         }
-        return new Logger(packageName,loggerConfig.getLevel(),
-                loggerConfig.getLogWriter(), loggerConfig.getFormatter());
+        return new Logger(packageName);
+    }
+
+    public static LogWriter getLogWriter(){
+        return logWriter;
+    }
+
+    public static void initialize(LoggerConfig config){
+        loggerConfig=config;
+        logWriter=config.getLogWriter();
     }
 
 
-    public static void configure(LoggerConfig loggerConfig){
-        LogManager.loggerConfig=loggerConfig;
+    public static void setLevel(Level level){
+        if (loggerConfig==null) ensureLoggerInitialization();
+        loggerConfig.setLevel(level);
     }
 
+    public static Level getLevel(){
+        if (loggerConfig==null) ensureLoggerInitialization();
+        return loggerConfig.getLevel();
+    }
 
-
-    //todo i think this is not needed anymore Jim.
-//    public static Logger getLogger(String packageName,Level level,LogWriter logWriter,LogFormatter logFormatter){
-//        if (packageName==null || packageName.isBlank()){
-//            //todo i dont know whether i throw an exception or just return null.
-//        }
-//        return new Logger(packageName,level,logWriter,logFormatter);
-//    }
-
-
-
-
-
+    //helper method
+    private static void ensureLoggerInitialization(){
+        if (loggerConfig==null){
+            LogFormatter logFormatter=new DefaultLogFormatter();
+            logWriter=new ConsoleLogWriter(new DefaultLogFormatter());
+            loggerConfig=new LoggerConfig()
+                    .setLevel(Level.TRACE)
+                    .setLogWriter(new ConsoleLogWriter(logFormatter));
+        }
+    }
 }
