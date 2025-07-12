@@ -1,18 +1,25 @@
 package com.logger.core;
 
+import java.io.Reader;
+
 public class Main {
-    private static final Logger logger=LogManager.getLogger("com.logger.core");
+//
     static {
         LoggerConfig loggerConfig=new LoggerConfig()
-                .setLogWriter(new FileLogWriter("logger1",new DefaultLogFormatter(),true))
-                .setLevel(Level.TRACE);
+                .setDefaultLevel(Level.TRACE)
+                .setLogWriter(new FileLogWriter("logger3",new DefaultLogFormatter(),true));
         LogManager.initialize(loggerConfig);
     }
+    private static final Logger logger=LogManager.getLogger("com.logger.core");
 
     public static void main(String[] args) {
+        LogManager.setLevel(logger.getPackageName(),Level.ERROR);
         logger.trace("Hello Im Sadegh");
-        logger.trace("Yeah it has been written into the file");
-        logger.trace("This is Awesome");
-        logger.trace("Connection for database is Okay error code Is:  %d",200);
+        logger.info("Hello Im Infoooooo");
+        logger.warn("Hello im Warnnnnnn");
+        logger.error("Hello Im Errorrrrrr");
+        logger.fatal("Hello Im Fatalllllll");
+        logger.debug("Hello Im Debugggggg");
+        logger.debug("Connection for database is Okay error code Is:  %d",200);
     }
 }

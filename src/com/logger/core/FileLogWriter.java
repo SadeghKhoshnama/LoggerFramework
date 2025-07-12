@@ -3,6 +3,7 @@ package com.logger.core;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Reader;
 
 public class FileLogWriter implements LogWriter{
     private String filePath;
@@ -17,8 +18,8 @@ public class FileLogWriter implements LogWriter{
 
     @Override
     public void write(Level level, String message, String packageName) {
-        try (BufferedWriter bufferedWriter=new BufferedWriter(new FileWriter(filePath,true))){
-            bufferedWriter.write(logFormatter.format(LogManager.getLevel(),message,packageName));
+        try (BufferedWriter bufferedWriter=new BufferedWriter(new FileWriter(filePath,append))){
+            bufferedWriter.write(logFormatter.format(level,message,packageName));
             bufferedWriter.newLine();
         }catch (IOException e){
             System.err.println("Logging failed: " + e.getMessage());

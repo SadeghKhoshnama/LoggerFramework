@@ -1,15 +1,21 @@
 package com.logger.core;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LogManager {
 
     private static LoggerConfig loggerConfig=null;
     private static LogWriter logWriter;
+    private static final Map<String,Logger> logObjects=new HashMap<>();
 
     public static Logger getLogger(String packageName){
         if (loggerConfig==null){
             ensureLoggerInitialization();
         }
-        return new Logger(packageName);
+        Logger logger=new Logger(packageName,loggerConfig.getDefaultLevel());
+        logObjects.put(packageName,logger);
+        return logger;
     }
 
     public static LogWriter getLogWriter(){
@@ -22,14 +28,12 @@ public class LogManager {
     }
 
 
-    public static void setLevel(Level level){
-        if (loggerConfig==null) ensureLoggerInitialization();
-        loggerConfig.setLevel(level);
-    }
-
-    public static Level getLevel(){
-        if (loggerConfig==null) ensureLoggerInitialization();
-        return loggerConfig.getLevel();
+    public static void setLevel(String packageName,Level level){
+        Logger targetLogger=logObjects.get(packageName);
+        if (targetLogger==null)
+            throw new RuntimeException("There is no active logger inside this package");
+        targetLogger.setLevel(level);
+        logObjects.put(packageName,targetLogger);//todo i dont know if its a good way to do it Jim.
     }
 
     //helper method
@@ -38,7 +42,7 @@ public class LogManager {
             LogFormatter logFormatter=new DefaultLogFormatter();
             logWriter=new ConsoleLogWriter(new DefaultLogFormatter());
             loggerConfig=new LoggerConfig()
-                    .setLevel(Level.TRACE)
+                    .setDefaultLevel(Level.INFO)
                     .setLogWriter(new ConsoleLogWriter(logFormatter));
         }
     }

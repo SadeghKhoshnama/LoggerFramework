@@ -6,7 +6,7 @@ public class LoggerConfig {
     private Level level;
     private LogWriter logWriter;
 
-    public LoggerConfig setLevel(Level level){
+    public LoggerConfig setDefaultLevel(Level level){
         this.level=level;
         return this;
     }
@@ -16,7 +16,7 @@ public class LoggerConfig {
         return this;
     }
 
-    public Level getLevel() {
+    public Level getDefaultLevel() {
         return level;
     }
 
