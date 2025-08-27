@@ -9,7 +9,7 @@ public class LogManager {
     private static LogWriter logWriter;
     private static final Map<String,Logger> logObjects=new HashMap<>();
 
-    public static Logger getLogger(String packageName){
+    public static Logger newLogger(String packageName){
         if (loggerConfig==null){
             ensureLoggerInitialization();
         }

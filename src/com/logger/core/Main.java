@@ -1,7 +1,5 @@
 package com.logger.core;
 
-import java.io.Reader;
-
 public class Main {
 //
     static {
@@ -10,7 +8,7 @@ public class Main {
                 .setLogWriter(new FileLogWriter("logger3",new DefaultLogFormatter(),true));
         LogManager.initialize(loggerConfig);
     }
-    private static final Logger logger=LogManager.getLogger("com.logger.core");
+    private static final Logger logger=LogManager.newLogger("com.logger.core");
 
     public static void main(String[] args) {
         LogManager.setLevel(logger.getPackageName(),Level.ERROR);
