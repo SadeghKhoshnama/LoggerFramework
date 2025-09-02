@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="639b7bb1-8133-4d21-be66-dd011ac7f644" name="Changes" comment="first commit after throw it away">
+      <change beforePath="$PROJECT_DIR$/target/classes/com/logger/core/Main.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="future/config-via-properties" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SadeghKhoshnama&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/SadeghKhoshnama/LoggerFramework.git&quot;,
+    &quot;accountId&quot;: &quot;70e31650-de8e-477d-b467-13ffc33d8b3b&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2zPY1nBXGCw7kXEQBsO8e7iSU96" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Maven.logger [clean,compile].executor": "Run",
+    "Maven.logger [clean].executor": "Run",
+    "Maven.logger [compile].executor": "Run",
+    "Maven.logger [install].executor": "Run",
+    "Maven.logger [org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.logger.core.Main" />
+      <module name="logger" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.logger.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="639b7bb1-8133-4d21-be66-dd011ac7f644" name="Changes" comment="" />
+      <created>1751633962525</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751633962525</updated>
+      <workItem from="1751633963564" duration="1667000" />
+      <workItem from="1751808348371" duration="10108000" />
+      <workItem from="1751863575408" duration="6798000" />
+      <workItem from="1751892149480" duration="1176000" />
+      <workItem from="1751968316354" duration="4134000" />
+      <workItem from="1752066769645" duration="922000" />
+      <workItem from="1752242765781" duration="2569000" />
+      <workItem from="1752320264091" duration="3353000" />
+      <workItem from="1752386775659" duration="1204000" />
+      <workItem from="1752408985844" duration="1759000" />
+      <workItem from="1752515659737" duration="132000" />
+      <workItem from="1752758102570" duration="2635000" />
+      <workItem from="1753016425798" duration="1403000" />
+      <workItem from="1755514038962" duration="20000" />
+      <workItem from="1756122829395" duration="4371000" />
+      <workItem from="1756280339937" duration="11227000" />
+      <workItem from="1756551793389" duration="4749000" />
+      <workItem from="1756737399115" duration="1838000" />
+      <workItem from="1756739256085" duration="2408000" />
+      <workItem from="1756812824326" duration="8730000" />
+    </task>
+    <task id="LOCAL-00001" summary="I have added the config for client to config it. and also added if condition inside log methods to not log below level.check it Jim">
+      <option name="closed" value="true" />
+      <created>1751814007251</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751814007251</updated>
+    </task>
+    <task id="LOCAL-00002" summary="I design it again and try to be clean as much as i can with the design but the code still need to be refactor.&#10;Check That Out">
+      <option name="closed" value="true" />
+      <created>1752004280328</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752004280328</updated>
+    </task>
+    <task id="LOCAL-00003" summary="MVP is completed only adding config by Property is left. so Jim check that out and let me know whether its good or not.">
+      <option name="closed" value="true" />
+      <created>1752323152339</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752323152339</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Config via property file is added its just sloppy but its working so i wanna know whether im going in a right direction or not.&#10;give me suggestions.">
+      <option name="closed" value="true" />
+      <created>1756815318701</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756815318701</updated>
+    </task>
+    <task id="LOCAL-00005" summary="first commit after throw it away">
+      <option name="closed" value="true" />
+      <created>1756839806880</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756839806880</updated>
+    </task>
+    <task id="LOCAL-00006" summary="first commit after throw it away">
+      <option name="closed" value="true" />
+      <created>1756840003919</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756840003919</updated>
+    </task>
+    <task id="LOCAL-00007" summary="first commit after throw it away">
+      <option name="closed" value="true" />
+      <created>1756840247137</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756840247137</updated>
+    </task>
+    <task id="LOCAL-00008" summary="first commit after throw it away">
+      <option name="closed" value="true" />
+      <created>1756840494377</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756840494377</updated>
+    </task>
+    <task id="LOCAL-00009" summary="first commit after throw it away">
+      <option name="closed" value="true" />
+      <created>1756840550432</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1756840550432</updated>
+    </task>
+    <task id="LOCAL-00010" summary="first commit after throw it away">
+      <option name="closed" value="true" />
+      <created>1756840817012</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1756840817012</updated>
+    </task>
+    <task id="LOCAL-00011" summary="first commit after throw it away">
+      <option name="closed" value="true" />
+      <created>1756840956451</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1756840956451</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="I have added the config for client to config it. and also added if condition inside log methods to not log below level.check it Jim" />
+    <MESSAGE value="I design it again and try to be clean as much as i can with the design but the code still need to be refactor.&#10;Check That Out" />
+    <MESSAGE value="MVP is completed only adding config by Property is left. so Jim check that out and let me know whether its good or not." />
+    <MESSAGE value="Config via property file is added its just sloppy but its working so i wanna know whether im going in a right direction or not.&#10;give me suggestions." />
+    <MESSAGE value="first commit after throw it away" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit after throw it away" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
