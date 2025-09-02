@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LoggerFramework.iml" filepath="$PROJECT_DIR$/LoggerFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logger.iml" filepath="$PROJECT_DIR$/logger.iml" />
     </modules>
   </component>
 </project>
