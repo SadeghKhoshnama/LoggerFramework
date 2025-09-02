@@ -16,6 +16,11 @@ public class DefaultLogFormatter implements LogFormatter{
                 : dateTimeFormatter;
     }
 
+
+    public void setDateTimeFormatter(String dateTimeFormatter) {
+        this.dateTimeFormatter = DateTimeFormatter.ofPattern(dateTimeFormatter);
+    }
+
     @Override
     public String format(Level level, String message, String packageName) {
         String timeStamp=LocalDateTime.now().format(dateTimeFormatter);

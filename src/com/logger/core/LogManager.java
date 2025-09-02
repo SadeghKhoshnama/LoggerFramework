@@ -1,13 +1,51 @@
 package com.logger.core;
 
+import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 public class LogManager {
 
-    private static LoggerConfig loggerConfig=null;
+    private static LoggerConfig loggerConfig=new LoggerConfig();
     private static LogWriter logWriter;
     private static final Map<String,Logger> logObjects=new HashMap<>();
+    private static final Properties properties=new Properties();
+
+    private LogManager() {
+    }
+
+    public static Logger newLogger(String packageName, String filePath){
+        if (packageName==null || packageName.isEmpty())
+            throw new IllegalArgumentException("PackageName should not be null");
+        if (filePath==null || filePath.isEmpty()){
+            return newLogger(packageName);
+        }
+        try {
+            properties.load(new FileInputStream(filePath));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        String level=properties.getProperty("logger.defaultLevel");
+        String writer=properties.getProperty("logger.writer");
+        String formatter=properties.getProperty("logger.formatter");
+
+//        loggerConfig.setDefaultLevel(Level.getLevel(level));
+        DefaultLogFormatter defaultLogFormatter=new DefaultLogFormatter();
+        defaultLogFormatter.setDateTimeFormatter(formatter);
+        if (writer.equals("file")){
+            String fileAddress=properties.getProperty("logger.fileAddress");
+            logWriter=new FileLogWriter(fileAddress,defaultLogFormatter,true);
+        }else
+            logWriter=new ConsoleLogWriter(defaultLogFormatter);
+
+//        loggerConfig.setLogWriter(logWriter);
+        Logger logger=new Logger(packageName,Level.getLevel(level));
+        logObjects.put(packageName,logger);
+        return logger;
+    }
+
+
 
     public static Logger newLogger(String packageName){
         if (loggerConfig==null){
@@ -22,6 +60,8 @@ public class LogManager {
         return logWriter;
     }
 
+
+
     public static void initialize(LoggerConfig config){
         loggerConfig=config;
         logWriter=config.getLogWriter();
@@ -33,7 +73,6 @@ public class LogManager {
         if (targetLogger==null)
             throw new RuntimeException("There is no active logger inside this package");
         targetLogger.setLevel(level);
-        logObjects.put(packageName,targetLogger);//todo i dont know if its a good way to do it Jim.
     }
 
     //helper method
