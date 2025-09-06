@@ -2,8 +2,10 @@ package com.logger.core;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world");
-        System.out.println("Git Hit");
-        System.out.println("Hello");
+        Logger logger=new Logger("com.logger.core");
+        logger.putAppenders(new ConsoleAppender(new SimpleLogFormatter()));
+        logger.log(Level.DEBUG,"This is the first log");
+
+
     }
 }
