@@ -8,7 +8,10 @@ public class LogEvent {
     private final LocalDateTime timeStamp;
     private final String threadName;
     private final String packageName;
+    //todo className and MethodName properties here and use reflection to fill it.
 
+
+    //todo you can remove the timestamp threadname packagename from argument and use reflection to get it.
     public LogEvent(Level level, String message, LocalDateTime timeStamp, String threadName, String packageName) {
         this.level = level;
         this.message = message;
