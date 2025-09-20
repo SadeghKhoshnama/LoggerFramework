@@ -17,9 +17,9 @@ public class LogManager {
         appendersList.addAll(Arrays.asList(appenders)); //todo check this Jim.
     }
 
-    public static Logger getLogger(String packageName){
+    public static Logger getLogger(String packageName,Level level){
         if (loggers.get(packageName)==null){
-            Logger logger=new Logger(packageName,Level.INFO);
+            Logger logger=new Logger(packageName,level);
             loggers.put(packageName,logger);
             return logger;
         }
@@ -41,16 +41,20 @@ public class LogManager {
         LogEvent logEvent=new LogEvent(level,message);
         try {
             events.put(logEvent);
+            Thread writerThread=new Thread(()->{
+                while (!events.isEmpty()){
+                    for (Appender appender: appendersList){
+                        try {
+                            appender.write(events.take());
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                }
+            });
+            writerThread.start();
         }catch (InterruptedException e){
          //todo i will handle this in the future
         }
-        Thread writerThread=new Thread(()->{
-            while (!events.isEmpty()){
-                for (Appender appender: appendersList){
-                    appender.write(logEvent);
-                }
-            }
-        });
-        writerThread.start();
     }
 }
