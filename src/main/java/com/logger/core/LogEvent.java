@@ -1,5 +1,6 @@
 package com.logger.core;
 
+import java.lang.reflect.Method;
 import java.time.LocalDateTime;
 
 public class LogEvent {
@@ -8,16 +9,20 @@ public class LogEvent {
     private final LocalDateTime timeStamp;
     private final String threadName;
     private final String packageName;
-    //todo className and MethodName properties here and use reflection to fill it.
+    private final String className;
+    private final String methodName;
 
 
-    //todo you can remove the timestamp threadname packagename from argument and use reflection to get it.
-    public LogEvent(Level level, String message, LocalDateTime timeStamp, String threadName, String packageName) {
+    public LogEvent(Level level, String message) {
         this.level = level;
         this.message = message;
-        this.timeStamp = timeStamp;
-        this.threadName = threadName;
-        this.packageName = packageName;
+        this.timeStamp = LocalDateTime.now();
+        this.threadName = Thread.currentThread().getName();
+        StackTraceElement stackTraceElement= Thread.currentThread()
+                .getStackTrace()[Thread.currentThread().getStackTrace().length -1];
+        this.packageName =stackTraceElement.getClassName();
+        this.className=stackTraceElement.getFileName();
+        this.methodName=stackTraceElement.getMethodName();
     }
 
 
