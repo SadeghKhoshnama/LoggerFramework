@@ -1,23 +1,22 @@
 package com.logger.core;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Logger {
-//    private final List<Appender> appenders;
     private final String packageName;
     private Level level;
+    private static final LoggerContext loggerContext=LoggerContext.getInstance();
 
-    public Logger(String packageName,Level level) {
+    public Logger(String packageName,Level defaultLevel) {
         this.packageName = packageName;
-        this.level=level;
+        this.level=defaultLevel;
     }
 
     public void log(Level level , String message){
-        if (level.getPriority()>= this.level.getPriority()){
-            LogManager.log(level,message);
+        if (this.level.ordinal()>= level.ordinal()){
+            LogEvent logEvent=new LogEvent(level,message);
+            loggerContext.log(logEvent);
         }
     }
+
+
+    //todo im gonna add info trace debug ... to it in future.
 }

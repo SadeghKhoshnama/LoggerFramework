@@ -9,7 +9,7 @@ public enum Level {
     DEBUG(2),
     TRACE(1),
     ;
-    private int priority;
+    private final int priority;
 
     Level(int priority) {
         this.priority=priority;

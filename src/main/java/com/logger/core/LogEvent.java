@@ -1,6 +1,5 @@
 package com.logger.core;
 
-import java.lang.reflect.Method;
 import java.time.LocalDateTime;
 
 public class LogEvent {
@@ -8,26 +7,29 @@ public class LogEvent {
     private final String message;
     private final LocalDateTime timeStamp;
     private final String threadName;
-    private final String packageName;
     private final String className;
     private final String methodName;
 
 
+
     public LogEvent(Level level, String message) {
-        this.level = level;
-        this.message = message;
+        this.level=level;
+        this.message=message;
         this.timeStamp = LocalDateTime.now();
+        StackTraceElement[] stackTraceElements=Thread.currentThread().getStackTrace();
+        StackTraceElement stackTraceElement= stackTraceElements[3];
         this.threadName = Thread.currentThread().getName();
-        StackTraceElement stackTraceElement= Thread.currentThread()
-                .getStackTrace()[Thread.currentThread().getStackTrace().length -1];
-        this.packageName =stackTraceElement.getClassName();
-        this.className=stackTraceElement.getFileName();
-        this.methodName=stackTraceElement.getMethodName();
+        this.className = stackTraceElement.getFileName();
+        this.methodName = stackTraceElement.getMethodName();
     }
 
 
-    public String getPackageName() {
-        return packageName;
+    public String getClassName() {
+        return className;
+    }
+
+    public String getMethodName() {
+        return methodName;
     }
 
     public Level getLevel() {

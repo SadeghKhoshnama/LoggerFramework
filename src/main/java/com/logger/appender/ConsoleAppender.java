@@ -1,6 +1,9 @@
-package com.logger.core;
+package com.logger.appender;
 
-public class ConsoleAppender implements Appender{
+import com.logger.formatter.Formatter;
+import com.logger.core.LogEvent;
+
+public class ConsoleAppender implements Appender {
 
     private final Formatter formatter;
 

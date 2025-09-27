@@ -1,6 +1,9 @@
-    package com.logger.core;
+    package com.logger.appender;
 
-    public class FileAppender implements Appender{
+    import com.logger.formatter.Formatter;
+    import com.logger.core.LogEvent;
+
+    public class FileAppender implements Appender {
         private final String filePath;
         private final String fileName;
         private final Formatter formatter;
