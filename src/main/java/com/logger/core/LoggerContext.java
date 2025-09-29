@@ -19,9 +19,25 @@ public class LoggerContext {
     private static final Object lock=new Object();
 
     private LoggerContext(){
-        //todo how to find a way to add appenders.
-
+        //todo have to know how to add appenders.
         appenders.add(new ConsoleAppender(new SimpleLogFormatter()));
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true){
+                    try {
+                        LogEvent logEvent= logEvents.take();
+                        for (Appender appender: appenders){
+                            appender.write(logEvent);
+                        }
+                    }catch (InterruptedException e){
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+
+        //todo how to find a way to add appenders.
     }
 
     //getting object with getInstance and also i made it thread safe. to not have two objects.
@@ -51,30 +67,14 @@ public class LoggerContext {
 //    }
 
 
-
     public void log(LogEvent logEvent){
         try {
             logEvents.add(logEvent);
-            writeToAppender();
         }catch (RuntimeException e){
             e.printStackTrace(); //todo i will handle this properly.
         }
     }
 
 
-    private void writeToAppender(){
-        Thread thread=new Thread(()->{
-            try {
-                LogEvent logEvent= logEvents.take();
-                for (Appender a: appenders){
-                    a.write(logEvent);
-                }
-
-            }catch (InterruptedException e){
-                e.printStackTrace(); //todo i will handle this properly.
-            }
-        });
-        thread.start();
-    }
 
 }

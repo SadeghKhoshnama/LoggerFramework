@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="639b7bb1-8133-4d21-be66-dd011ac7f644" name="Changes" comment="Two Tasked Compeleted ( Reflection , QueueWith backGround thread) check this out Jim.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/logger/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/logger/core/LoggerContext.java" afterDir="false" />
+    <list default="true" id="639b7bb1-8133-4d21-be66-dd011ac7f644" name="Changes" comment="Okay i have designed kinda like MVP so check this out please and hint me the mistakes so i can work on those dont give me answers please.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/logger/core/Appender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/logger/appender/Appender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/logger/core/ConsoleAppender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/logger/appender/ConsoleAppender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/logger/core/FileAppender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/logger/appender/FileAppender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/logger/core/Formatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/logger/formatter/Formatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/logger/core/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/logger/core/Level.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/logger/core/LogEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/logger/core/LogEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/logger/core/LogManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/logger/core/LogManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/logger/core/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/logger/core/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/logger/core/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/logger/core/SimpleLogFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/logger/formatter/SimpleLogFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/logger/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/logger/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/logger/core/LoggerContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/logger/core/LoggerContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +160,8 @@
       <workItem from="1758367209887" duration="4607000" />
       <workItem from="1758470222692" duration="5225000" />
       <workItem from="1758541740998" duration="4945000" />
-      <workItem from="1758972620374" duration="5652000" />
+      <workItem from="1758972620374" duration="6887000" />
+      <workItem from="1759058474951" duration="4549000" />
     </task>
     <task id="LOCAL-00001" summary="I have added the config for client to config it. and also added if condition inside log methods to not log below level.check it Jim">
       <option name="closed" value="true" />
@@ -364,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758371522181</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Okay i have designed kinda like MVP so check this out please and hint me the mistakes so i can work on those dont give me answers please.">
+      <option name="closed" value="true" />
+      <created>1758978781201</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1758978781201</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +390,8 @@
     <MESSAGE value="This is the commit before the tasks Jim." />
     <MESSAGE value="i have done those two things Jim check those out and give me feedback please." />
     <MESSAGE value="Two Tasked Compeleted ( Reflection , QueueWith backGround thread) check this out Jim." />
-    <option name="LAST_COMMIT_MESSAGE" value="Two Tasked Compeleted ( Reflection , QueueWith backGround thread) check this out Jim." />
+    <MESSAGE value="Okay i have designed kinda like MVP so check this out please and hint me the mistakes so i can work on those dont give me answers please." />
+    <option name="LAST_COMMIT_MESSAGE" value="Okay i have designed kinda like MVP so check this out please and hint me the mistakes so i can work on those dont give me answers please." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -403,7 +403,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/logger/Main.java</url>
-          <line>11</line>
+          <line>12</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -415,6 +415,21 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/logger/Main.java</url>
           <line>9</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/logger/core/LoggerContext.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/logger/core/LoggerContext.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/logger/core/LoggerContext.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
