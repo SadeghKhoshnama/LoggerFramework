@@ -51,6 +51,8 @@ public class LoggerContext {
         }
         return instance;
     }
+
+
     public Logger getLogger(String packageName,Level level){
         if (loggers.get(packageName)!=null){
             return loggers.get(packageName);
@@ -59,12 +61,6 @@ public class LoggerContext {
         loggers.put(packageName,logger);
         return new Logger(packageName,level);
     }
-
-
-//    public Logger getLogger(Class<?> clazz){
-//        String packageName= clazz.getPackageName();
-//        return getLogger(packageName,Level.INFO); //if user dont specify level im gonna put INFO.
-//    }
 
 
     public void log(LogEvent logEvent){
