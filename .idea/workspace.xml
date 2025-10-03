@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="639b7bb1-8133-4d21-be66-dd011ac7f644" name="Changes" comment="first commit after throw it away" />
+    <list default="true" id="639b7bb1-8133-4d21-be66-dd011ac7f644" name="Changes" comment="thread for reading from queue and write it to the appender has been written.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -51,6 +55,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.com.logger.Main.executor": "Run",
     "Maven.logger [clean,compile].executor": "Run",
     "Maven.logger [clean].executor": "Run",
     "Maven.logger [compile].executor": "Run",
@@ -59,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "future/mvp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,13 +77,26 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.com.logger.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.logger.core.Main" />
       <module name="logger" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.logger.core.*" />
+          <option name="PATTERN" value="com.logger.core.appender.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.logger.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.logger.Main" />
+      <module name="logger" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.logger.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,7 +106,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.com.logger.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
@@ -130,7 +148,20 @@
       <workItem from="1756551793389" duration="4749000" />
       <workItem from="1756737399115" duration="1838000" />
       <workItem from="1756739256085" duration="2408000" />
-      <workItem from="1756812824326" duration="9158000" />
+      <workItem from="1756812824326" duration="10481000" />
+      <workItem from="1756881710662" duration="1000" />
+      <workItem from="1757157469737" duration="7212000" />
+      <workItem from="1757510502242" duration="5000" />
+      <workItem from="1757595083933" duration="3198000" />
+      <workItem from="1757795863825" duration="617000" />
+      <workItem from="1757852079744" duration="7358000" />
+      <workItem from="1758367209887" duration="4607000" />
+      <workItem from="1758470222692" duration="5225000" />
+      <workItem from="1758541740998" duration="4945000" />
+      <workItem from="1758972620374" duration="6887000" />
+      <workItem from="1759058474951" duration="4549000" />
+      <workItem from="1759149232648" duration="1305000" />
+      <workItem from="1759216308939" duration="42000" />
     </task>
     <task id="LOCAL-00001" summary="I have added the config for client to config it. and also added if condition inside log methods to not log below level.check it Jim">
       <option name="closed" value="true" />
@@ -276,7 +307,71 @@
       <option name="project" value="LOCAL" />
       <updated>1756841386367</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="first commit after throw it away">
+      <option name="closed" value="true" />
+      <created>1756841496165</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1756841496165</updated>
+    </task>
+    <task id="LOCAL-00020" summary="first commit after throw it away">
+      <option name="closed" value="true" />
+      <created>1756841729796</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1756841729796</updated>
+    </task>
+    <task id="LOCAL-00021" summary="This is the MVP for Logger Project Jim so let me know what do you think i think about what a simple logger framework that i can build so this is just a MVP i will work thorugh it with you and handle the problems. check this out please.">
+      <option name="closed" value="true" />
+      <created>1757165044740</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1757165044740</updated>
+    </task>
+    <task id="LOCAL-00022" summary="This is the commit before the tasks Jim.">
+      <option name="closed" value="true" />
+      <created>1757852222864</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1757852222864</updated>
+    </task>
+    <task id="LOCAL-00023" summary="i have done those two things Jim check those out and give me feedback please.">
+      <option name="closed" value="true" />
+      <created>1758370868087</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1758370868087</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Two Tasked Compeleted ( Reflection , QueueWith backGround thread) check this out Jim.">
+      <option name="closed" value="true" />
+      <created>1758371522181</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1758371522181</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Okay i have designed kinda like MVP so check this out please and hint me the mistakes so i can work on those dont give me answers please.">
+      <option name="closed" value="true" />
+      <created>1758978781201</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1758978781201</updated>
+    </task>
+    <task id="LOCAL-00026" summary="thread for reading from queue and write it to the appender has been written.">
+      <option name="closed" value="true" />
+      <created>1759149971444</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1759149971444</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +394,44 @@
     <MESSAGE value="MVP is completed only adding config by Property is left. so Jim check that out and let me know whether its good or not." />
     <MESSAGE value="Config via property file is added its just sloppy but its working so i wanna know whether im going in a right direction or not.&#10;give me suggestions." />
     <MESSAGE value="first commit after throw it away" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit after throw it away" />
+    <MESSAGE value="This is the MVP for Logger Project Jim so let me know what do you think i think about what a simple logger framework that i can build so this is just a MVP i will work thorugh it with you and handle the problems. check this out please." />
+    <MESSAGE value="This is the commit before the tasks Jim." />
+    <MESSAGE value="i have done those two things Jim check those out and give me feedback please." />
+    <MESSAGE value="Two Tasked Compeleted ( Reflection , QueueWith backGround thread) check this out Jim." />
+    <MESSAGE value="Okay i have designed kinda like MVP so check this out please and hint me the mistakes so i can work on those dont give me answers please." />
+    <MESSAGE value="thread for reading from queue and write it to the appender has been written." />
+    <option name="LAST_COMMIT_MESSAGE" value="thread for reading from queue and write it to the appender has been written." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/logger/Main.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/logger/Main.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/logger/core/LogEvent.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/logger/Main.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/logger/core/LoggerContext.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
